@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Employee List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>Employee ID</td>
+                    <td>Employee Name</td>
+                    <td>Employee Salary</td> 
+                    <td>Delete</td>
+                    <td>Update</td> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Emp of employee">
+                    <td>{{Emp.empid}}</td>
+                    <td>{{Emp.empname}}</td>
+                    <td>{{Emp.salary}}</td>
+                    <td><button (click)="deleteEmp(Emp.empid)">Delete</button></td>
+                    <td><button id="update"><a routerLink="/update">Update</a></button></td>
+                </tr>
+            </tbody>
+        </table><br><br>
+        <button routerLink="/register">Add Employee</button>
+
+        
+    </div>
+</body>
+</html>

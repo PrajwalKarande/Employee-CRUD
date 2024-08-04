@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+</head>
+<body>
+    
+    <div id="main">
+        <h1>Register New Employee</h1>
+        <label>Employee ID</label>
+        <input type="number" [(ngModel)]="employee.empid" placeholder="Enter employee id" required minlength="3" pattern="\d{1,4}" title="Employee Number cannot be zero">
+        <label>Employee Name</label>
+        <input type="text" [(ngModel)]="employee.empname" placeholder="Enter employee Name" required>
+        <label>Employee Salary</label>
+        <input type="number" [(ngModel)]="employee.salary" placeholder="Enter employee Salary" required maxlength="7">
+        <button (click)="register()" routerLink="/emp">SUBMIT</button>
+    </div>
+</body>
+</html>

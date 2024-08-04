@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Employee</title>
+</head>
+<body>
+    <div>
+        <label>Search Employee</label>
+        <input type="number" [(ngModel)]="id" placeholder="Enter Employee ID">
+        <button (click)="findEmp()">Search</button>
+        <table>
+            <thead>
+                <tr>
+                    <td>Employee ID</td>
+                    <td>Employee Name</td>
+                    <td>Employee Salary</td> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{result.empid}}</td> 
+                    <td>{{result.empname}}</td>
+                    <td>{{result.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
