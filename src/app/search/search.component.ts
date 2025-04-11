@@ -8,7 +8,7 @@ import { Employee } from '../Employee';
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [FormsModule,RouterLink,CommonModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
